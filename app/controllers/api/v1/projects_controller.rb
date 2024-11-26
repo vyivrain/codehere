@@ -1,4 +1,6 @@
 class Api::V1::ProjectsController < ApplicationController
+  before_action :authenticate_request
+
   def index
     user = User.find(params[:user_id])
     projects = Project.all

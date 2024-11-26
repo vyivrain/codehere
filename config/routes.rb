@@ -11,6 +11,8 @@ Rails.application.routes.draw do
       resources :users
       resources :projects
       resources :project_files
+
+      resources :sessions, only: [:create]
     end
   end
 end

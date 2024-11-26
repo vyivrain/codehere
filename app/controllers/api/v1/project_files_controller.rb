@@ -1,4 +1,6 @@
 class Api::V1::ProjectFilesController < ApplicationController
+  before_action :authenticate_request
+
   def index
     project_files = ProjectFile.all
     render json: project_files, status: :ok
