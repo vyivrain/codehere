@@ -1,4 +1,4 @@
-class DeployAppJob < ApplicationJob
+class DeployProjectJob < ApplicationJob
   queue_as :default
 
   def perform(app)
